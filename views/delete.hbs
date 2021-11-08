@@ -1,0 +1,57 @@
+<h1>{{title}}</h1>
+
+<table>
+    <tr>
+        <td>Dname</td>
+        <td>Dnumber</td>        
+    </tr>
+    {{#each department}}
+      <form method="post" >
+      <tr>    
+         <td>{{Dname}}</td>
+         <td>{{Dnumber}}</td> 
+         <!-- formaction 속성을 활용하여 입력값을 넘겨줌 -->       
+         <td style="border : none; margin-left: 10px;">
+           <button
+           style="margin-left: 10px;"
+           name='delBtn'
+           type="submit"
+           value="{{Dnumber}}"
+           formaction="/delete" 
+           >
+           삭제
+           </button>
+         </td>
+      </tr>    
+    </form> 
+    {{/each}}
+</table>
+
+<h1>{{title2}}</h1>
+
+<table>
+    <tr>
+        <td>Univ_name</td>
+        <td>Univ_number</td>        
+    </tr>
+    {{#each university}}
+      <form method="post" >
+      <tr>    
+         <td>{{Univ_name}}</td>
+         <td>{{Univ_number}}</td> 
+         <!-- formaction 속성을 활용하여 입력값을 넘겨줌 -->       
+         <td style="border : none; margin-left: 10px;">
+           <button
+           style="margin-left: 10px;"
+           name='delBtn'
+           type="submit"
+           value="{{Univ_number}}"
+           formaction="/delete" 
+           >
+           삭제
+           </button>
+         </td>
+      </tr>    
+    </form> 
+    {{/each}}
+</table>
